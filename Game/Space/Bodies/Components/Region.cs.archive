@@ -1,0 +1,180 @@
+﻿//using Newtonsoft.Json;
+//using SpaceCore.Extensions;
+//using SpaceCore.Game.Components;
+//using SpaceCore.Game.Entities.Buildables;
+//using SpaceCore.Interfaces;
+//using SpaceCore.Types;
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
+//using System.Runtime.Serialization;
+
+
+//namespace SpaceCore.Game.Space.Bodies.Components
+//{
+//	/// <summary>
+//	/// A representation of a sector within a planet or moon. Stores all of the planet's buildings, outposts, or 
+//	/// cities as well as a collection of the exploitable resources within.
+//	/// </summary>
+//	/// <typeparam name="TBody"></typeparam>
+//	[JsonObject(MemberSerialization.OptIn)]
+//	[Table("region")]
+//	public class Region: ITableObject, IFocusableEntity<BaseBody>
+//	{
+
+//		/// <summary>
+//		/// This object's id in the database
+//		/// </summary>
+//		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+//		[Key, Required, JsonRequired]
+//		public int ObjectId { get; set; }
+
+
+
+//		/// <summary>
+//		/// The id of this region
+//		/// </summary>
+//		[JsonProperty("id")]
+//		[JsonRequired]
+//		[Column("id")]
+//		[Required]
+//		public string Id { get; private set; }
+
+
+//		/// <summary>
+//		/// The name of this region
+//		/// </summary>
+//		[JsonProperty("name")]
+//		[Column("name")]
+//		public string Name { get; set; }
+
+
+//		/// <summary>
+//		/// The alias of this region
+//		/// </summary>
+//		[JsonProperty("alias")]
+//		[Column("alias")]
+//		public string? Alias { get; set; }
+
+
+//		/// <summary>
+//		/// The description of this region
+//		/// </summary>
+//		[JsonProperty("description")]
+//		[Column("description")]
+//		public string? Description { get; set; }
+
+
+//		[JsonProperty("buildings")]
+//		[Column("buildings")]
+//		public virtual IList<Buildable> Buildings { get; private set; } = new List<Buildable>();
+
+
+//		/// <summary>
+//		/// Creates an instance of a new region that may (should) live within a moon or planet
+//		/// </summary>
+//		/// <param name="index">The index of this region within the planet</param>
+//		/// <param name="name">The name of this region. If null, a random feature name will be provided</param>
+//		/// <param name="alias">The alias of this region. If null, the name will be used.</param>
+//		/// <param name="description">The description of this region. If null, a 'no description'-like message will be used.</param>
+//		public Region(int index, string? name = null, string? alias = null, string? description = null)
+//		{
+//			Id = "r" + index;
+
+//			Name = name ?? "Unnamed";
+//			Alias = alias ?? Name;
+//			Description = description ?? "No description has been set";
+//		}
+
+
+//		/// <summary>
+//		/// Constructor for EF Core. Not safe to use.
+//		/// </summary>
+//		protected Region() { }
+
+
+//		/// <summary>
+//		/// The dictionary representation of the resources and their corresponding amounts that 
+//		/// exist within this region
+//		/// </summary>
+//		[JsonProperty("harvestables")]
+//		[Column("harvestables")]
+//		public ItemQuantityCollection HarvestableResources { get; set; } = [];
+
+//		[JsonProperty("parent")]
+//		[Column("parent")]
+//		public virtual BaseBody Parent { get; set; }
+
+
+//		/// <summary>
+//		/// Adds a consumable resource within this region with its corresponding amount.
+//		/// If the resource already exists, the value will be added to the existing one.
+//		/// </summary>
+//		/// <param name="resource">The resource to add</param>
+//		/// <param name="amount">The amount to use</param>
+//		/// <returns>This called object.</returns>
+//		public Region WithHarvestableResource(Resource resource, ExpoNumber amount)
+//		{
+//			if (HarvestableResources.HasItem(resource))
+//			{
+//				HarvestableResources[resource] += amount;
+//				return this;
+//			}
+//			HarvestableResources[resource] = amount;
+//			return this;
+//		}
+
+//		/// <summary>
+//		/// Sets the name of this region
+//		/// </summary>
+//		/// <param name="name">The name</param>
+//		/// <returns>This called object</returns>
+//		public Region WithName(string name)
+//		{
+//			Name = name;
+//			return this;
+//		}
+
+//		/// <summary>
+//		/// Sets the alias of this region
+//		/// </summary>
+//		/// <param name="alias">The alias</param>
+//		/// <returns>This called object</returns>
+//		public Region WithAlias(string alias)
+//		{
+//			Alias = alias;
+//			return this;
+//		}
+
+//		/// <summary>
+//		/// Sets the description of this region
+//		/// </summary>
+//		/// <param name="description">The description</param>
+//		/// <returns>This called object</returns>
+//		public Region WithDescription(string description)
+//		{
+//			Description = description;
+//			return this;
+//		}
+
+
+//		public Region WithBuilding(Buildable building)
+//		{
+//			Buildings.Add(building);
+//			return this;
+//		}
+
+//		public IFocusable? GetChild(string id)
+//		{
+//			return Buildings.FirstOrDefault(b => b.Id == id);
+//		}
+
+//		public IReadOnlyList<IFocusable> GetChildren() => [.. Buildings];
+
+//		public string FocusId => Id;
+
+
+//		[OnDeserialized]
+//		internal void OnDeserialized(StreamingContext context) => this.AssignSelfToChildren();
+
+//	}
+//}
