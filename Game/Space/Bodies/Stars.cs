@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Space.Bodies
+namespace Core.Game.Space.Bodies
 {
 
 	public enum StarType

@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Components
+namespace Core.Game.Components
 {
 
 	public enum Group

@@ -2,13 +2,13 @@
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations.Schema;
-using SpaceCore.Interfaces;
+using Core.Interfaces;
 using System.ComponentModel.DataAnnotations;
-using SpaceCore.Game.Components;
-using SpaceCore.Extensions;
+using Core.Game.Components;
+using Core.Extensions;
 using System.Runtime.Serialization;
 
-namespace SpaceCore.Game.Space.Base
+namespace Core.Game.Space.Base
 {
 	/// <summary>
 	/// The basis of all space objects. All sub-classes utilize JSON serialization and deserialization

@@ -1,4 +1,4 @@
-﻿namespace SpaceCore.Game.Components
+﻿namespace Core.Game.Components
 {
 	/// <summary>
 	/// The different rarity types that control spawning rates, prices, and frequencies of items,

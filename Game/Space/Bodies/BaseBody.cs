@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Game.Components;
-using SpaceCore.Game.Entities.Buildables;
-using SpaceCore.Game.Space.Base;
-using SpaceCore.Types;
+using Core.Game.Components;
+using Core.Game.Entities.Buildables;
+using Core.Game.Space.Base;
+using Core.Types;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Space.Bodies
+namespace Core.Game.Space.Bodies
 {
 	public enum BodyAttribute
 	{

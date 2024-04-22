@@ -1,6 +1,6 @@
-﻿using SpaceCore.Game.Components;
+﻿using Core.Game.Components;
 
-namespace SpaceCore.Extensions
+namespace Core.Extensions
 {
 	internal static class FocusableEntityExtensions
 	{

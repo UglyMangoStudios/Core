@@ -1,4 +1,4 @@
-﻿namespace SpaceCore.Game.Components
+﻿namespace Core.Game.Components
 {
 	public interface IFocusableEntity<TParent> : IFocusable where TParent : IFocusable
 	{

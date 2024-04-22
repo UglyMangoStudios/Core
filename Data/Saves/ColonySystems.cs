@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Extensions;
-using SpaceCore.Game.Components;
-using SpaceCore.Game.Space;
+using Core.Extensions;
+using Core.Game.Components;
+using Core.Game.Space;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace SpaceCore.Data.Saves
+namespace Core.Data.Saves
 {
 
 	[JsonObject(MemberSerialization.OptIn)]

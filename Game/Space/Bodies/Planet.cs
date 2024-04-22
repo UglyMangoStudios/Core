@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Game.Components;
+using Core.Game.Components;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Space.Bodies
+namespace Core.Game.Space.Bodies
 {
 	/// <summary>
 	/// Represents a planetary object. Most of the player game data will live in the planets they colonize

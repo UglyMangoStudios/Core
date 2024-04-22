@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Interfaces;
+using Core.Interfaces;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Space
+namespace Core.Game.Space
 {
 	//A representation of planetary rings
 	[JsonObject(MemberSerialization.OptIn)]

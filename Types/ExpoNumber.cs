@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newtonsoft.Json;
-using SpaceCore.Attributes;
+using Core.Attributes;
 using System.Globalization;
 
-namespace SpaceCore.Types
+namespace Core.Types
 {
 
 	public class ExpoNumberJsonConverter : JsonConverter

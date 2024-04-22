@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Types;
+using Core.Types;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Components
+namespace Core.Game.Components
 {
 
     /// <summary>

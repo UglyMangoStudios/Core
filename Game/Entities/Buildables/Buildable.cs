@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Extensions;
-using SpaceCore.Game.Components;
-using SpaceCore.Game.Space.Bodies;
-using SpaceCore.Interfaces;
-using SpaceCore.Types;
+using Core.Extensions;
+using Core.Game.Components;
+using Core.Game.Space.Bodies;
+using Core.Interfaces;
+using Core.Types;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace SpaceCore.Game.Entities.Buildables
+namespace Core.Game.Entities.Buildables
 {
 
 	[JsonObject(MemberSerialization.OptIn)]

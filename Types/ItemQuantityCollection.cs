@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newtonsoft.Json;
-using SpaceCore.Attributes;
-using SpaceCore.Game.Components;
+using Core.Attributes;
+using Core.Game.Components;
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace SpaceCore.Types
+namespace Core.Types
 {
 	public class ItemQuantityCollectionJsonConverter : JsonConverter
 	{

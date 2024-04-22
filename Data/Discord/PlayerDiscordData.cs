@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using SpaceCore.Attributes;
-using SpaceCore.Extensions;
+using Core.Attributes;
+using Core.Extensions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Data.Discord
+namespace Core.Data.Discord
 {
 	/// <summary>
 	/// A collection of the relevant channels associated in for a player's game in a company guild

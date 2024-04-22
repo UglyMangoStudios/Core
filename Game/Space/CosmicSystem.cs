@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Game.Components;
-using SpaceCore.Game.Space.Base;
-using SpaceCore.Game.Space.Bodies;
+using Core.Game.Components;
+using Core.Game.Space.Base;
+using Core.Game.Space.Bodies;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Space
+namespace Core.Game.Space
 {
 
 	/// <summary>

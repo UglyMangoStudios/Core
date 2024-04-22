@@ -1,4 +1,4 @@
-﻿namespace SpaceCore.Attributes
+﻿namespace Core.Attributes
 {
 
 	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]

@@ -1,4 +1,4 @@
-﻿namespace SpaceCore.Types
+﻿namespace Core.Types
 {
     /// <summary>
     /// An extremely simple class that collects multiple tasks easily and allows for a wait all method

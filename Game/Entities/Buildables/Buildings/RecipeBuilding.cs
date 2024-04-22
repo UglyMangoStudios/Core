@@ -1,10 +1,10 @@
 ﻿
 using Newtonsoft.Json;
-using SpaceCore.Game.Components;
-using SpaceCore.Types;
+using Core.Game.Components;
+using Core.Types;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Entities.Buildables.Buildings
+namespace Core.Game.Entities.Buildables.Buildings
 {
 
 	public enum BuildingType

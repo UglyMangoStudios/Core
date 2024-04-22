@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
-using SpaceCore.Game.Components;
-using SpaceCore.Interfaces;
-using SpaceCore.Types;
+using Core.Game.Components;
+using Core.Interfaces;
+using Core.Types;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Game.Entities.Buildables.Buildings
+namespace Core.Game.Entities.Buildables.Buildings
 {
 	[JsonObject(MemberSerialization.OptIn)]
 	public class BuildableFactory : ITableObject

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace SpaceCore.Extensions
+namespace Core.Extensions
 {
 	public static class JsonUtility
 	{

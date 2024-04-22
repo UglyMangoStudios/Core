@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using SpaceCore.Attributes;
-using SpaceCore.Extensions;
+using Core.Attributes;
+using Core.Extensions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SpaceCore.Data.Discord
+namespace Core.Data.Discord
 {
 	/// <summary>
 	/// Simple enumeration that describes the company's guild's current status

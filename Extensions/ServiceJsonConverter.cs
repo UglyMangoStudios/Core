@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SpaceCore.Extensions
+namespace Core.Extensions
 {
 	public class ServiceJsonConverter<T> : JsonConverter
 	{
